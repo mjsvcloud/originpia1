@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>스킬 상세 정보 - 오리진피아</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 20px; color: #333; }
+        h1 { color: #2c3e50; border-bottom: 2px solid #2c3e50; padding-bottom: 10px; }
+        h2 { color: #2c3e50; margin-top: 40px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #f8f9fa; font-weight: bold; }
+        .name { font-weight: bold; }
+        .back-link { display: inline-block; margin-top: 30px; color: #666; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <h1>스킬 (Skills)</h1>
+    <p>오리진피아의 일반 스킬 및 성좌 스킬 정보입니다.</p>
+
+    <h2>1. 일반 스킬</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>스킬명</th>
+                <th>스킬 효과</th>
+                <th>마나소모</th>
+                <th>쿨타임</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td class="name">명상</td><td>5초간 마나회복 속도 30배 증가</td><td>10</td><td>90</td></tr>
+            <tr><td class="name">도약</td><td>위로 도약한다</td><td>30</td><td>20</td></tr>
+            <tr><td class="name">대쉬</td><td>전방으로 도약한다</td><td>30</td><td>20</td></tr>
+            <tr><td class="name">백대쉬</td><td>뒤로 도약한다</td><td>30</td><td>20</td></tr>
+            <tr><td class="name">보호막</td><td>20초간 보호막 부여</td><td>70</td><td>45</td></tr>
+            <tr><td class="name">응급처치</td><td>최대체력 15% 회복 및 5초간 매초 1% 회복</td><td>90</td><td>60</td></tr>
+            <tr><td class="name">강격</td><td>전방을 X 모양으로 2번 벤다</td><td>40</td><td>25</td></tr>
+            <tr><td class="name">속사</td><td>전방으로 빠르게 화살을 5발 쏜다</td><td>50</td><td>30</td></tr>
+            <tr><td class="name">강풍</td><td>주변 적을 밀쳐내며 피해를 준다</td><td>60</td><td>40</td></tr>
+            <tr><td class="name">그랩</td><td>바라보는 대상을 끌어오며 피해를 준다</td><td>70</td><td>45</td></tr>
+            <tr><td class="name">은신</td><td>8초간 은신한다</td><td>100</td><td>60</td></tr>
+            <tr><td class="name">속박</td><td>2초간 바라보는 대상을 속박한다</td><td>80</td><td>50</td></tr>
+        </tbody>
+    </table>
+
+    <h2>2. 성좌 스킬</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>분류</th>
+                <th>스킬명</th>
+                <th>스킬 효과</th>
+                <th>마나소모</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td rowspan="8">마성</td><td class="name">오만한위압</td><td>자신보다 공격력 낮은 적에게 10초간 스턴</td><td>650</td></tr>
+            <tr><td class="name">분노의광폭화</td><td>10초간 받은 피해 50%만큼 공격력 증가</td><td>550</td></tr>
+            <tr><td class="name">나태의족쇄</td><td>주변 적 속도 60% 감소</td><td>800</td></tr>
+            <tr><td class="name">색욕의유혹</td><td>주변 적 피해감소 0으로 변경</td><td>900</td></tr>
+            <tr><td class="name">폭식의찬탈</td><td>10초간 가한 피해 20% 회복</td><td>650</td></tr>
+            <tr><td class="name">침묵의질투</td><td>자신보다 공격력 높은 적에게 7초간 침묵</td><td>600</td></tr>
+            <tr><td class="name">탐욕의무게</td><td>소지 돈에 비례한 피해</td><td>500</td></tr>
+			<tr><td class="name">판데모니움</td><td>창 투척 후 10초간 지속 피해</td><td>1400</td></tr>
+            <tr><td rowspan="7">육도</td><td class="name">천상도</td><td>주변 적 띄운 후 내리꽂아 피해</td><td>700</td></tr>
+            <tr><td class="name">축생도</td><td>촉수 6개 소환 (1분)</td><td>800</td></tr>
+            <tr><td class="name">아귀도</td><td>적 끌어오며 피해 및 체력 100 회복</td><td>750</td></tr>
+            <tr><td class="name">인간도</td><td>대상과 자신의 체력 비율 평균화</td><td>950</td></tr>
+            <tr><td class="name">수라도</td><td>10초간 공격 사거리 5칸 증가</td><td>850</td></tr>
+            <tr><td class="name">지옥도</td><td>10초간 주변에 가시 소환하여 닿은적 0.5초 스턴</td><td>1100</td></tr>
+			<tr><td class="name">육도문개방</td><td>적 끌어오기 후 내리찍어 피해</td><td>1800</td></tr>
+            <tr><td rowspan="5">천령</td><td class="name">성검의심판</td><td>성검 투척 후 번개 3회 피해</td><td>600</td></tr>
+            <tr><td class="name">신의가호</td><td>주변 파티원 5회 방어 보호막</td><td>750</td></tr>
+            <tr><td class="name">치유의권능</td><td>파티원 체력/마나 즉시 전체 회복</td><td>700</td></tr>
+            <tr><td class="name">정화의불꽃</td><td>상태이상 정화 및 주변 적 피해</td><td>450</td></tr>
+			<tr><td class="name">에덴의성역</td><td>10초간 무적 및 정화  후 많은 양의 보호막</td><td>1500</td></tr>
+        </tbody>
+    </table>
+	<h2>3. 패시브 및 히든 스킬</h2>
+    <p>오리진피아에서는 특별한 <strong>히든 퀘스트</strong>를 완료함으로써 강력한 패시브 스킬과 히든 스킬을 획득할 수 있습니다.</p>
+    <ul>
+        <li><strong>패시브 스킬 :</strong> 고유한 효과를 주거나, 특정 조건하에서 강력해집니다</li>
+        <li><strong>히든 스킬 :</strong> 일반 스킬과 성좌 스킬보다 더 좋을수도 덜 좋을수도 있습니다</li>
+    </ul>
+
+    <a href="index.html" class="back-link">← 메인 페이지로 돌아가기</a>
+</body>
+</html>

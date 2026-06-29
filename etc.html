@@ -2,64 +2,69 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>기타 콘텐츠 상세 정보 - 오리진피아</title>
+    <title>기타 사항 - 오리진피아</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; max-width: 1000px; margin: 40px auto; padding: 20px; color: #333; }
+        body { font-family: sans-serif; line-height: 1.6; max-width: 900px; margin: 40px auto; padding: 20px; color: #333; }
         h1 { color: #2c3e50; border-bottom: 2px solid #2c3e50; padding-bottom: 10px; }
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        th, td { border: 1px solid #ddd; padding: 15px; text-align: left; }
-        th { background-color: #f8f9fa; font-weight: bold; white-space: nowrap; }
-        .item-name { font-weight: bold; width: 150px; }
         
-        /* 디스코드 버튼 스타일 */
-        .discord-btn {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 12px 25px;
-            background-color: #5865F2; /* 디스코드 브랜드 컬러 */
-            color: white !important;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s;
+        /* 공통 섹션 박스 스타일 */
+        .content-box { 
+            background-color: #fcfcfc; 
+            border: 1px solid #eee; 
+            border-radius: 8px; 
+            padding: 20px; 
+            margin-bottom: 20px; 
         }
-        .discord-btn:hover { background-color: #4752C4; }
         
-        .footer-links { margin-top: 30px; border-top: 1px solid #eee; padding-top: 20px; }
-        .back-link { display: inline-block; color: #666; text-decoration: none; }
-        .back-link:hover { text-decoration: underline; }
+        h2 { margin-top: 0; color: #2c3e50; }
+        ul { margin-top: 10px; padding-left: 20px; }
+        li { margin-bottom: 10px; }
+        
+        .back-link { display: inline-block; margin-top: 30px; color: #666; text-decoration: none; }
     </style>
 </head>
 <body>
 
-    <h1>기타 콘텐츠 (Etc)</h1>
-    <p>오리진피아의 다양한 부가 시스템 및 콘텐츠 상세 정보입니다.</p>
+    <h1>기타 사항 안내</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>항목</th>
-                <th>상세 설명</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><td class="item-name">요리</td><td>11종의 음식 추가, 섭취 시 각기 다른 효과 적용</td></tr>
-            <tr><td class="item-name">전이석</td><td>맵 곳곳의 전이석 등록 시 해당 위치로 텔레포트 가능</td></tr>
-            <tr><td class="item-name">스킬</td><td>무기에 스킬 장착 아이템으로 강화해 여러 스킬을 등록하여 사용 가능</td></tr>
-            <tr><td class="item-name">패시브</td><td>히든 퀘스트를 통해 획득 가능</td></tr>
-            <tr><td class="item-name">계약스킬</td><td>시작 시 천령/마성/육도 중 랜덤 선택된 성좌에 따라 스킬 구성 변화</td></tr>
-            <tr><td class="item-name">길드</td><td>많은 인원들과 길드를 창설하고 가꿀 수 있음</td></tr>
-            <tr><td class="item-name">파티</td><td>몬스터 사냥 시 최대 4인 파티 구성 가능 (파티원/길드원 간 아군 피해 없음)</td></tr>
-            <tr><td class="item-name">레이드</td><td>일정 레벨 도달 시 강력한 레이드 보스 토벌 가능</td></tr>
-            <tr><td class="item-name">속성석</td><td>길드 시설을 통해 1인당 1개의 속성석 부여 가능</td></tr>
-        </tbody>
-    </table>
-
-    <a href="https://discord.gg/SGQRsVFHk" class="discord-btn" target="_blank">Discord 커뮤니티 참여하기</a>
-
-    <div class="footer-links">
-        <a href="index.html" class="back-link">← 메인 페이지로 돌아가기</a>
+    <!-- 1. 제작 섹션 -->
+    <div class="content-box">
+        <h2>1. 제작 (Crafting)</h2>
+        <ul>
+            <li><strong>조합법 안내 : </strong>아이템의 조합법은 <strong>패치노트</strong>를 통해 올라갈 예정입니다.</li>
+        </ul>
     </div>
 
+    <!-- 2. 맵 제작 및 시스템 정보 -->
+    <div class="content-box">
+        <h2>2. 맵 제작 및 시스템 정보</h2>
+        <ul>
+            <li><strong>배경 :</strong> 바탕 맵은 해외 맵을 기반으로 제작되었습니다.</li>
+            <li><strong>건축물 :</strong> 스케메틱 파일, 직접 건축, 그리고 모드 건축 방식을 모두 활용하였습니다.</li>
+            <li><strong>제작 방식 :</strong> 몬스터와 무기/갑옷의 디자인을 제외한 서버의 모든 기능은 <strong>자체 제작한 스크립트</strong>를 기반으로 작동합니다.</li>
+            <li><strong>디자인 활용 :</strong> 몬스터와 무기/장비 디자인은 자체 제작, 모드, 아머러즈 파일을 활용하였습니다.</li>
+        </ul>
+    </div>
+
+    <!-- 3. 퀘스트 섹션 -->
+    <div class="content-box">
+        <h2>3. 퀘스트 (Quest)</h2>
+        <ul>
+            <li>퀘스트 내용은 채팅을 통해 안내되므로, 게임 진행 시 유의해서 잘 읽어주시길 바랍니다.</li>
+            <li>퀘스트 목록을 통해 간략한 내용을 확인하실 수 있습니다.</li>
+        </ul>
+    </div>
+
+    <!-- 4. 쿠폰 섹션 -->
+    <div class="content-box">
+        <h2>4. 쿠폰 (Coupon)</h2>
+        <ul>
+            <li><strong>입력 방법 :</strong> 채팅창에 <code>/쿠폰입력 [쿠폰번호]</code>를 입력하여 사용합니다.</li>
+            <li><strong>번호 유형 :</strong> 공개된 쿠폰번호와 소수에게만 제공되는 비공개 쿠폰번호가 존재할 수 있습니다.</li>
+            <li><strong>사용 제한 :</strong> 쿠폰은 계정당 <strong>1회</strong>만 사용 가능합니다.</li>
+        </ul>
+    </div>
+
+    <a href="index.html" class="back-link">← 메인 페이지로 돌아가기</a>
 </body>
 </html>

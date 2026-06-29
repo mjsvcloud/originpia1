@@ -18,15 +18,27 @@
             margin-right: 8px; 
             margin-bottom: 8px;
             font-size: 0.9em; 
-            text-decoration: none; /* 밑줄 제거 */
-            color: #333;           /* 글자색 유지 */
-            transition: background 0.2s; /* 살짝 부드럽게 변함 */
+            text-decoration: none;
+            color: #333; 
+            transition: background 0.2s;
         }
-        
-        /* 마우스를 올렸을 때 효과 */
-        .skill-tag:hover {
-            background: #cbd5db;
+        .skill-tag:hover { background: #cbd5db; }
+
+        /* 디스코드 버튼 스타일 */
+        .discord-btn {
+            display: inline-block;
+            background: #5865F2; 
+            color: white !important; 
+            padding: 10px 20px; 
+            border-radius: 5px; 
+            margin-right: 8px;
+            margin-bottom: 8px;
+            font-size: 0.9em; 
+            text-decoration: none; 
+            font-weight: bold;
+            transition: background 0.2s;
         }
+        .discord-btn:hover { background: #4752c4; }
     </style>
 </head>
 <body>
@@ -39,26 +51,49 @@
     <div class="section">
         <h2>About this server</h2>
         <p>RPG에 필요한 요소를 생각나는대로 모조리 때려넣은 서버입니다.</p>
-		<p>Who makes this?! <strong>민준</strong></p>
+        <p>Who makes this?! It's me! <strong>민준</strong></p>
     </div>
-	
-	<div class="section">
-		<h2>공지사항</h2>
-		<a href="notice.html" style="text-decoration: none; color: #007bff; font-weight: bold;">
-			📢 최신 패치노트 확인하기
-		</a>
-	</div>
-
+    
     <div class="section">
-        <h2>간단한 확인</h2>
-        <a href="stats.html" class="skill-tag">스텟</a>
-        <a href="jobs.html" class="skill-tag">직업</a>
-        <a href="runes.html" class="skill-tag">룬</a>
-        <a href="ruting.html" class="skill-tag">파밍</a>
-		<a href="map.html" class="skill-tag">지도</a>
-		<a href="https://drive.google.com/file/d/1O6DdkK4g6eW75Zh8JLBJ5Z_XIQ9IkYyi/view?usp=drive_link" class="skill-tag" target="_blank">다운로드</a>
-		<a href="etc.html" class="skill-tag">그 외</a>
+        <h2>공지사항</h2>
+        <a href="notice.html" style="text-decoration: none; color: #007bff; font-weight: bold;">
+            📢 최신 패치노트 확인하기
+        </a>
     </div>
 
-</body>
-</html>
+   <div class="section">
+        <h2>게임 정보 및 시스템</h2>
+        
+        <!-- 첫 번째 줄: 스텟 직업 보주 룬 -->
+        <div style="margin-bottom: 10px;">
+            <a href="stats.html" class="skill-tag">스텟</a>
+            <a href="jobs.html" class="skill-tag">직업</a>
+			<a href="skills.html" class="skill-tag">스킬</a>
+			<a href="equip.html" class="skill-tag">장비</a>
+            <a href="subtem.html" class="skill-tag">보조 아이템</a>
+			<a href="multi.html" class="skill-tag">멀티 시스템</a>
+        </div>
+
+        <!-- 두 번째 줄: 지도 파밍 요리 스킬 -->
+        <div style="margin-bottom: 25px;">
+            <a href="map.html" class="skill-tag">월드</a>
+            <a href="ruting.html" class="skill-tag">파밍</a>
+            <a href="food.html" class="skill-tag">음식</a>
+			<a href="enhance.html" class="skill-tag">강화</a>
+			<a href="rule.html" class="skill-tag">규칙</a>
+			<a href="etc.html" class="skill-tag">기타 사항</a>
+			
+        </div>
+
+        <!-- 하단 버튼: 다운로드, 디스코드, 그 외 -->
+        <div>
+            <a href="https://drive.google.com/file/d/1O6DdkK4g6eW75Zh8JLBJ5Z_XIQ9IkYyi/view?usp=drive_link" 
+               class="skill-tag" 
+               style="background: #2c3e50; color: white; padding: 10px 20px; font-weight: bold;" 
+               target="_blank">📥패치기 다운로드</a>
+            
+            <a href="https://discord.gg/SGQRsVFHk" class="discord-btn" target="_blank">💬 Discord 링크</a>
+            
+            
+        </div>
+    </div>
