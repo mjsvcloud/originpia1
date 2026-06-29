@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>스텟 설명 - 오리진피아</title>
+	<style>
+		body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 20px; color: #333; }
+		h1 { border-bottom: 2px solid #2c3e50; padding-bottom: 10px; }
+		table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+		th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+		th { background-color: #f8f9fa; }
+		
+		/* 색상 클래스 (굵게 제거됨) */
+		.red { color: #e74c3c; }    /* 투지 - 붉은색 */
+		.orange { color: #e67e22; } /* 활력 - 주황색 */
+		.blue { color: #3498db; }   /* 신념 - 파란색 */
+		.yellow { color: #d4ac0d; } /* 예리 - 노란색 */
+		
+		/* 툴팁(마우스 오버 시 공식 노출) 스타일링 */
+		.tooltip {
+			position: relative;
+			cursor: help; /* 마우스를 올리면 물음표/도움말 커서로 변경 */
+		}
+
+		.tooltip .tooltiptext {
+			visibility: hidden;
+			width: 200px;
+			background-color: #333;
+			color: #fff;
+			text-align: center;
+			padding: 6px 0;
+			border-radius: 6px;
+			font-size: 0.85em;
+			
+			/* 위치 설정 (글자 위로 띄움) */
+			position: absolute;
+			z-index: 1;
+			bottom: 130%; 
+			left: 50%;
+			margin-left: -100px;
+			
+			/* 부드럽게 나타나는 효과 */
+			opacity: 0;
+			transition: opacity 0.3s;
+		}
+
+		/* 마우스를 올렸을 때 툴팁을 보이게 함 */
+		.tooltip:hover .tooltiptext {
+			visibility: visible;
+			opacity: 1;
+		}
+		
+		.back-link { display: inline-block; margin-top: 20px; color: #666; text-decoration: none; }
+	</style>
+</head>
+<body>
+
+	<h1>오리진피아 스텟 상세 정보</h1>
+
+	<table>
+		<thead>
+			<tr>
+				<th>스텟 명</th>
+				<th>효과</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="red">투지</td>
+				<td>1당 공격력 2 증가</td>
+			</tr>
+			<tr>
+				<td class="orange">활력</td>
+				<td>1당 체력 10 증가</td>
+			</tr>
+			<tr>
+				<td class="blue tooltip">신념
+					<span class="tooltiptext">공식:<br>
+						(신념 스텟) / (신념 스텟 + 레벨 + 500) %
+					</span>
+				</td>
+				<td>스텟량에 따라 피해감소율 증가</td>
+			</tr>
+			<tr>
+				<td class="yellow">예리</td>
+				<td>1당 치명타 확률 0.1% 증가</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<a href="index.html" class="back-link">← 메인 페이지로 돌아가기</a>
+
+</body>
+</html>

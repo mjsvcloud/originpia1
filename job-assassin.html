@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>도적 상세 정보 - 오리진피아</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; max-width: 1000px; margin: 40px auto; padding: 20px; color: #333; }
+        h1 { color: #2c3e50; border-bottom: 2px solid #2c3e50; padding-bottom: 10px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 15px; text-align: left; }
+        th { background-color: #f8f9fa; font-weight: bold; white-space: nowrap; }
+        .skill-name { font-weight: bold; color: #d35400; width: 150px; }
+        .back-link { display: inline-block; margin-top: 20px; color: #666; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <h1>도적 (Assassin)</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>구분</th>
+                <th>스킬명</th>
+                <th>상세 설명 및 효과</th>
+                <th>쿨타임</th>
+                <th>단축키</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1차</td>
+                <td class="skill-name">은신</td>
+                <td>5초간 은신한다</td>
+                <td>40s</td>
+                <td>Right click</td>
+            </tr>
+            <tr>
+                <td>2차</td>
+                <td class="skill-name">그림자밟기</td>
+                <td>바라보는 대상의 뒤로 이동하며 피해를 준다</td>
+                <td>45s</td>
+                <td>F key</td>
+            </tr>
+            <tr>
+                <td>3차</td>
+                <td class="skill-name">패시브</td>
+                <td>예리 스텟이 200 증가한다 (치명타 확률 20%)</td>
+                <td>0s</td>
+                <td>Passive</td>
+            </tr>
+            <tr>
+                <td>4차</td>
+                <td class="skill-name">패시브</td>
+                <td>공격시 8% 확률로 출혈을 일으킨다<br>(출혈 피해 - 몬스터 : 30% * 5회 | 플레이어 : 최대 체력 2% * 5회)</td>
+                <td>0s</td>
+                <td>Passive</td>
+            </tr>
+            <tr>
+                <td>5차</td>
+                <td class="skill-name">급소찌르기</td>
+                <td>바라보는 적에게 치명타확률과 레벨에 비례하여 피해를 입힌다</td>
+                <td>120s</td>
+                <td>Shift + Right click</td>
+            </tr>
+            <tr>
+                <td>6차</td>
+                <td class="skill-name">암습</td>
+                <td>주변 모든 적의 뒤로 이동하며 치명타확률과 예리 스텟, 공격력에 비례하여 2회 공격한다</td>
+                <td>210s</td>
+                <td>Shift + F key</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="jobs.html" class="back-link">← 직업 목록으로 돌아가기</a>
+</body>
+</html>

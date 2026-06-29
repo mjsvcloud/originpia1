@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>오리진피아 - 지도</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; max-width: 1000px; margin: 40px auto; padding: 20px; color: #333; }
+        h1 { color: #2c3e50; border-bottom: 2px solid #2c3e50; padding-bottom: 10px; }
+        
+        /* 탭 버튼 스타일 */
+        .tab-button { padding: 15px 30px; font-size: 16px; cursor: pointer; background-color: #f8f9fa; border: 1px solid #ddd; border-radius: 5px; }
+        .tab-button:hover { background-color: #e9ecef; }
+        
+        /* 지도 이미지 영역 스타일 */
+        #map-container { display: none; margin-top: 20px; border: 2px solid #ddd; padding: 10px; }
+        #map-container img { max-width: 100%; height: auto; }
+        
+        .back-link { display: inline-block; margin-top: 30px; color: #666; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <h1>월드 맵</h1>
+    <p>아래 버튼을 클릭하여 지도를 확인하세요.</p>
+
+    <!-- 지도 보기 버튼 -->
+    <button class="tab-button" onclick="toggleMap()">지도 보기/숨기기</button>
+
+    <!-- 지도 이미지 영역 -->
+    <div id="map-container">
+        <!-- 이곳에 지도가 될 이미지 파일명을 넣으세요 -->
+        <img src="map_image.png" alt="오리진피아 월드맵">
+    </div>
+
+    <script>
+        // 버튼 클릭 시 이미지를 보여주거나 숨기는 자바스크립트 함수
+        function toggleMap() {
+            var container = document.getElementById("map-container");
+            if (container.style.display === "none" || container.style.display === "") {
+                container.style.display = "block";
+            } else {
+                container.style.display = "none";
+            }
+        }
+    </script>
+
+    <a href="index.html" class="back-link">← 메인 페이지로 돌아가기</a>
+</body>
+</html>
