@@ -9,8 +9,25 @@
         table { width: 100%; border-collapse: collapse; margin-top: 20px; }
         th, td { border: 1px solid #ddd; padding: 15px; text-align: left; }
         th { background-color: #f8f9fa; font-weight: bold; white-space: nowrap; }
-        .item-name { font-weight: bold; width: 120px; }
-        .back-link { display: inline-block; margin-top: 20px; color: #666; text-decoration: none; }
+        .item-name { font-weight: bold; width: 150px; }
+        
+        /* 디스코드 버튼 스타일 */
+        .discord-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            background-color: #5865F2; /* 디스코드 브랜드 컬러 */
+            color: white !important;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .discord-btn:hover { background-color: #4752C4; }
+        
+        .footer-links { margin-top: 30px; border-top: 1px solid #eee; padding-top: 20px; }
+        .back-link { display: inline-block; color: #666; text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
@@ -38,6 +55,11 @@
         </tbody>
     </table>
 
-    <a href="index.html" class="back-link">← 메인 페이지로 돌아가기</a>
+    <a href="https://discord.gg/SGQRsVFHk" class="discord-btn" target="_blank">Discord 커뮤니티 참여하기</a>
+
+    <div class="footer-links">
+        <a href="index.html" class="back-link">← 메인 페이지로 돌아가기</a>
+    </div>
+
 </body>
 </html>
