@@ -10,11 +10,15 @@
 		th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
 		th { background-color: #f8f9fa; }
 		
+		/* 열 너비 고정 */
+		th:first-child, td:first-child { width: 30%; }
+		
 		/* 색상 클래스 */
-		.red { color: #e74c3c; }    /* 투지 - 붉은색 */
-		.orange { color: #e67e22; } /* 활력 - 주황색 */
-		.blue { color: #3498db; }   /* 신념 - 파란색 */
-		.yellow { color: #d4ac0d; } /* 예리 - 노란색 */
+		.red { color: #e74c3c; font-weight: bold; }
+		.orange { color: #e67e22; font-weight: bold; }
+		.blue { color: #3498db; font-weight: bold; }
+		.yellow { color: #d4ac0d; font-weight: bold; }
+		.category { background-color: #f2f2f2; font-weight: bold; text-align: center; }
 		
 		.back-link { display: inline-block; margin-top: 20px; color: #666; text-decoration: none; }
 	</style>
@@ -31,6 +35,7 @@
 			</tr>
 		</thead>
 		<tbody>
+			<tr><td colspan="2" class="category">플레이어가 찍을 수 있는 스텟</td></tr>
 			<tr>
 				<td class="red">투지</td>
 				<td>1당 공격력 2 증가</td>
@@ -43,12 +48,34 @@
 				<td class="blue">신념</td>
 				<td>
 					피해감소율 증가<br>
-					<small style="color: #7f8c8d;"> 피해감소율 = (신념스텟량) / (신념스텟량 + 레벨 + 500) %</small>
+					<small style="color: #7f8c8d;">피해감소율 = (신념스텟량) / (신념스텟량 + 레벨 + 500) %</small>
 				</td>
 			</tr>
 			<tr>
 				<td class="yellow">예리</td>
 				<td>1당 치명타 확률 0.1% 증가</td>
+			</tr>
+			
+			<tr><td colspan="2" class="category">플레이어가 찍을 수 없는 스텟</td></tr>
+			<tr>
+				<td>마나</td>
+				<td>스킬 사용시 마나 소모</td>
+			</tr>
+			<tr>
+				<td>체력흡수</td>
+				<td>해당 수치만큼 적 공격 시 자신의 체력 회복</td>
+			</tr>
+			<tr>
+				<td>이동속도</td>
+				<td>1당 이동 속도 1% 증가</td>
+			</tr>
+			<tr>
+				<td>쿨타임감소</td>
+				<td>해당 수치만큼 스킬 재사용 대기시간 % 감소</td>
+			</tr>
+			<tr>
+				<td>경험치 증가</td>
+				<td>해당 수치만큼 경험치 획득량 % 증가</td>
 			</tr>
 		</tbody>
 	</table>
