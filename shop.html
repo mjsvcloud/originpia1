@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>상점 - 오리진피아</title>
+    <style>
+    body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 20px; color: #333; }
+    header { border-bottom: 2px solid #eee; padding-bottom: 20px; margin-bottom: 30px; }
+    h1 { color: #2c3e50; }
+    
+    .skill-tag { 
+        display: inline-block; background: #e1e8ed; padding: 8px 20px; border-radius: 5px; 
+        margin-right: 8px; margin-bottom: 8px; font-size: 0.9em; text-decoration: none;
+        color: #333; border: none; cursor: pointer; transition: background 0.2s;
+    }
+    .skill-tag:hover { background: #cbd5db; }
+
+    #content-area {
+        border: 1px solid #eee; padding: 25px; border-radius: 8px;
+        min-height: 200px; background: #fff;
+    }
+    
+    /* 깔끔한 표 디자인 */
+    .item-list { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    .item-list td { padding: 10px; border-bottom: 1px solid #f0f0f0; }
+    
+    /* 섹션 제목 강조 */
+    .section-header { background-color: #f8f9fa; color: #555; font-weight: bold; }
+    .section-header td { padding: 15px 10px 5px 10px; border-bottom: none; color: #2c3e50; }
+</style>
+</head>
+<body>
+
+    <header>
+        <h1>상점</h1>
+        
+    </header>
+
+    <div class="section">
+        <div style="margin-bottom: 20px;">
+            <button class="skill-tag" onclick="showCategory('mineral')">광물</button>
+            <button class="skill-tag" onclick="showCategory('fish')">낚시</button>
+            <button class="skill-tag" onclick="showCategory('plant')">식물</button>
+            <button class="skill-tag" onclick="showCategory('byproduct')">부산물</button>
+        </div>
+
+        <div id="content-area">
+            <h3>상점 안내</h3>
+            <p>위의 카테고리를 선택하여 품목을 확인하세요.</p>
+        </div>
+    </div>
+
+    <script>
+        function showCategory(category) {
+            const area = document.getElementById('content-area');
+            
+            // 데이터 정의 (이곳의 내용을 수정하여 상품을 추가하세요)
+            const data = {
+    'mineral': `<h3>광물 상점</h3>
+    <table class="item-list" style="width:100%; border-collapse: collapse; font-size: 0.9em;">
+        <thead>
+            <tr style="border-bottom: 2px solid #ccc;">
+                <th style="text-align: left;">이름</th>
+                <th style="text-align: left;">가격</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="background-color: #f0f0f0;"><td colspan="2"><strong>기본 광물</strong></td></tr>
+            <tr><td>석탄</td><td>120원</td></tr>
+            <tr><td>구리</td><td>180원</td></tr>
+            <tr><td>철</td><td>350원</td></tr>
+            <tr><td>금</td><td>650원</td></tr>
+            <tr><td>레드스톤</td><td>350원</td></tr>
+            <tr><td>청금석</td><td>400원</td></tr>
+            <tr><td>자수정</td><td>1,200원</td></tr>
+            <tr><td>다이아</td><td>4,500원</td></tr>
+            <tr><td>에메랄드</td><td>9,000원</td></tr>
+            <tr><td>흑요석</td><td>5,000원</td></tr>
+            <tr><td>종유석</td><td>400원</td></tr>
+            
+            <tr style="background-color: #f0f0f0;"><td colspan="2" style="padding-top: 15px;"><strong>추가된 광물</strong></td></tr>
+            <tr><td>적동석</td><td>2,000원</td></tr>
+            <tr><td>페리도트</td><td>2,500원</td></tr>
+            <tr><td>로즈쿼츠</td><td>3,000원</td></tr>
+            <tr><td>헤마티아트</td><td>3,500원</td></tr>
+            <tr><td>아쿠아마린</td><td>10,000원</td></tr>
+            <tr><td>라리마</td><td>12,000원</td></tr>
+            <tr><td>프레나이트</td><td>14,000원</td></tr>
+            <tr><td>멜러카이트</td><td>16,000원</td></tr>
+            <tr><td>오닉스</td><td>52,000원</td></tr>
+            <tr><td>오팔</td><td>55,000원</td></tr>
+            <tr><td>남정석</td><td>58,000원</td></tr>
+            <tr><td>스페사르틴</td><td>61,000원</td></tr>
+            <tr><td>쿤자이트</td><td>64,000원</td></tr>
+            <tr><td>사파이어</td><td>252,000원</td></tr>
+            <tr><td>수길라이트</td><td>280,000원</td></tr>
+            <tr><td>댄버라이트</td><td>310,000원</td></tr>
+            <tr><td>레그란다이트</td><td>350,000원</td></tr>
+            <tr><td>투르말린</td><td>1,300,000원</td></tr>
+            <tr><td>퍼퓨라이트</td><td>1,500,000원</td></tr>
+        </tbody>
+    </table>`,
+    'fish': `<h3>낚시 상점</h3>
+    <table class="item-list" style="width:100%; border-collapse: collapse; font-size: 0.9em;">
+        <thead>
+            <tr style="border-bottom: 2px solid #ccc;">
+                <th style="text-align: left;">이름</th>
+                <th style="text-align: left;">가격</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="section-header"><td colspan="2">방랑종</td></tr>
+            <tr><td>개복치</td><td>283원</td></tr><tr><td>고등어</td><td>258원</td></tr><tr><td>그린 퍼치</td><td>554원</td></tr><tr><td>금붕어</td><td>224원</td></tr><tr><td>날치</td><td>292원</td></tr><tr><td>노란 열대어</td><td>660원</td></tr><tr><td>니모</td><td>276원</td></tr><tr><td>레드 베스</td><td>571원</td></tr><tr><td>레드 스내퍼</td><td>781원</td></tr><tr><td>레드 스트라이프</td><td>634원</td></tr><tr><td>무지개 옥돔</td><td>2,171원</td></tr><tr><td>복어</td><td>221원</td></tr><tr><td>분홍 날치</td><td>684원</td></tr><tr><td>붉은 옥돔</td><td>746원</td></tr><tr><td>붕어</td><td>219원</td></tr><tr><td>브라운 카프</td><td>705원</td></tr><tr><td>블랙 베스</td><td>683원</td></tr><tr><td>블랙 스니퍼</td><td>778원</td></tr><tr><td>블루 길</td><td>573원</td></tr><tr><td>송사리</td><td>215원</td></tr><tr><td>연어</td><td>233원</td></tr><tr><td>옐로 베스</td><td>776원</td></tr><tr><td>은빛 연어</td><td>758원</td></tr><tr><td>잉어</td><td>247원</td></tr><tr><td>주황 열대어</td><td>602원</td></tr><tr><td>줄돔</td><td>272원</td></tr><tr><td>청새치</td><td>231원</td></tr><tr><td>초록 베스</td><td>752원</td></tr><tr><td>크라운 피쉬</td><td>2,013원</td></tr><tr><td>퍼플 핀</td><td>745원</td></tr><tr><td>푸른 베스</td><td>614원</td></tr><tr><td>푸른 열대어</td><td>772원</td></tr><tr><td>푸른 옥돔</td><td>595원</td></tr><tr><td>화이트 마린</td><td>773원</td></tr><tr><td>흑돔</td><td>647원</td></tr>
+
+            <tr class="section-header"><td colspan="2" style="padding-top: 15px;">희소종</td></tr>
+            <tr><td>가오리</td><td>10,714원</td></tr><tr><td>가재</td><td>5,367원</td></tr><tr><td>꼼장어</td><td>13,968원</td></tr><tr><td>돌고래</td><td>11,094원</td></tr><tr><td>문어</td><td>15,563원</td></tr><tr><td>바다 거북</td><td>11,257원</td></tr><tr><td>바다 뱀</td><td>14,911원</td></tr><tr><td>바다 악어</td><td>12,164원</td></tr><tr><td>불가사리</td><td>5,410원</td></tr><tr><td>블러드 옥토퍼스</td><td>13,298원</td></tr><tr><td>블루 옥토퍼스</td><td>14,673원</td></tr><tr><td>블룸 피쉬</td><td>11,557원</td></tr><tr><td>새우</td><td>5,158원</td></tr><tr><td>성게</td><td>5,806원</td></tr><tr><td>소라 게</td><td>4,485원</td></tr><tr><td>장어</td><td>15,384원</td></tr><tr><td>조개</td><td>4,096원</td></tr><tr><td>진주 조개</td><td>4,700원</td></tr><tr><td>초롱아귀</td><td>13,070원</td></tr><tr><td>코랄 워커</td><td>10,645원</td></tr><tr><td>투구 게</td><td>4,723원</td></tr><tr><td>해마</td><td>14,417원</td></tr><tr><td>해파리</td><td>10,642원</td></tr><tr><td>홍게</td><td>5,381원</td></tr><tr><td>흑게</td><td>4,678원</td></tr>
+
+            <tr class="section-header"><td colspan="2" style="padding-top: 15px;">포식종</td></tr>
+            <tr><td>가든 피쉬</td><td>97,487원</td></tr><tr><td>고래상어</td><td>102,907원</td></tr><tr><td>대왕오징어</td><td>107,634원</td></tr><tr><td>맹독 오징어</td><td>37,854원</td></tr><tr><td>바이러스 복어</td><td>33,394원</td></tr><tr><td>백상아리</td><td>30,317원</td></tr><tr><td>범고래</td><td>105,296원</td></tr><tr><td>블랙 샤크</td><td>42,394원</td></tr><tr><td>블루 웨일</td><td>107,664원</td></tr><tr><td>심해 톱 상어</td><td>82,733원</td></tr><tr><td>심해 해파리</td><td>39,845원</td></tr><tr><td>심해 상어</td><td>101,422원</td></tr><tr><td>아일랜드 웨일</td><td>100,947원</td></tr><tr><td>오로라 초롱아귀</td><td>84,911원</td></tr><tr><td>오로라 해파리</td><td>79,066원</td></tr><tr><td>유령 초롱아귀</td><td>93,179원</td></tr><tr><td>유령 고래</td><td>111,401원</td></tr><tr><td>전기 뱀장어</td><td>34,151원</td></tr><tr><td>전기복어</td><td>40,241원</td></tr><tr><td>청상아리</td><td>31,012원</td></tr><tr><td>코발트 샤크</td><td>33,953원</td></tr><tr><td>프로스트 샤크</td><td>113,446원</td></tr><tr><td>프로스트 웨일</td><td>85,305원</td></tr><tr><td>향유고래</td><td>98,141원</td></tr><tr><td>흑동고래</td><td>96,466원</td></tr>
+
+            <tr class="section-header"><td colspan="2" style="padding-top: 15px;">환상종</td></tr>
+            <tr><td>고대 해마</td><td>213,843원</td></tr><tr><td>공허 해룡</td><td>784,247원</td></tr><tr><td>라바 크랩</td><td>301,712원</td></tr><tr><td>라바 윙</td><td>754,622원</td></tr><tr><td>별빛 가오리</td><td>678,910원</td></tr><tr><td>실러캔스</td><td>224,690원</td></tr><tr><td>씨 서펜트</td><td>825,576원</td></tr><tr><td>오로라 스타피쉬</td><td>271,129원</td></tr><tr><td>은하수 물고기</td><td>579,469원</td></tr><tr><td>철갑 서펜트</td><td>685,504원</td></tr>
+
+            <tr class="section-header"><td colspan="2" style="padding-top: 15px;">지배종</td></tr>
+            <tr><td>고대 에메랄드 거북</td><td>3,537,568원</td></tr><tr><td>메갈로돈</td><td>3,596,392원</td></tr><tr><td>모비딕</td><td>3,501,190원</td></tr><tr><td>유령 해룡</td><td>3,772,179원</td></tr><tr><td>히드라</td><td>3,565,279원</td></tr>
+        </tbody>
+    </table>`, 
+    'plant': `<h3>식물 상점</h3>
+    <table class="item-list" style="width:100%; border-collapse: collapse; font-size: 0.9em;">
+        <thead>
+            <tr style="border-bottom: 2px solid #ccc;">
+                <th style="text-align: left;">이름</th>
+                <th style="text-align: left;">가격</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="section-header"><td colspan="2">기본 식물</td></tr>
+            <tr><td>당근</td><td>50원</td></tr>
+            <tr><td>감자</td><td>45원</td></tr>
+            <tr><td>독감자</td><td>600원</td></tr>
+            <tr><td>밀</td><td>80원</td></tr>
+            <tr><td>수박</td><td>20원</td></tr>
+            <tr><td>호박</td><td>70원</td></tr>
+            <tr><td>사탕수수</td><td>85원</td></tr>
+            
+            <tr class="section-header"><td colspan="2" style="padding-top: 15px;">추가 식물</td></tr>
+            <tr><td>산들쪽잎</td><td>250원</td></tr>
+            <tr><td>태양변단</td><td>300원</td></tr>
+            <tr><td>물망초이끼</td><td>350원</td></tr>
+            <tr><td>연노을꽃</td><td>400원</td></tr>
+            <tr><td>방울꽃</td><td>450원</td></tr>
+            <tr><td>골든듀</td><td>1,000원</td></tr>
+            <tr><td>노을덩굴</td><td>1,500원</td></tr>
+            <tr><td>물결초</td><td>2,000원</td></tr>
+            <tr><td>무지개초</td><td>2,500원</td></tr>
+            <tr><td>위스퍼우드</td><td>3,500원</td></tr>
+            <tr><td>설초</td><td>4,000원</td></tr>
+            <tr><td>그림자넝쿨</td><td>10,000원</td></tr>
+            <tr><td>라이프비드</td><td>12,000원</td></tr>
+            <tr><td>미스틱핑거</td><td>14,000원</td></tr>
+            <tr><td>바이올렛세이드</td><td>16,000원</td></tr>
+            <tr><td>불타는잎사귀</td><td>18,000원</td></tr>
+            <tr><td>아쿠아로터스</td><td>20,000원</td></tr>
+            <tr><td>실버판톰</td><td>30,000원</td></tr>
+            <tr><td>라바캡</td><td>85,000원</td></tr>
+            <tr><td>블러드벨럿</td><td>89,000원</td></tr>
+            <tr><td>소울랜턴</td><td>93,000원</td></tr>
+            <tr><td>솔라리스블룸</td><td>96,000원</td></tr>
+            <tr><td>정령이깃든뿌리</td><td>104,000원</td></tr>
+            <tr><td>청염의수련</td><td>110,000원</td></tr>
+            <tr><td>에테르릴리</td><td>125,000원</td></tr>
+            <tr><td>만드라고라</td><td>800,000원</td></tr>
+            <tr><td>셀레네크레센트</td><td>820,000원</td></tr>
+            <tr><td>어비스로즈</td><td>840,000원</td></tr>
+            <tr><td>엘더루트</td><td>850,000원</td></tr>
+            <tr><td>헬바이트</td><td>880,000원</td></tr>
+            <tr><td>흑련화</td><td>900,000원</td></tr>
+            <tr><td>프로스트앰플</td><td>1,000,000원</td></tr>
+        </tbody>
+    </table>`,
+    
+    'byproduct': `<h3>사냥/부산물 상점</h3>
+        <table class="item-list" style="width:100%; border-collapse: collapse;">
+            <tr><td>토끼</td><td>1,200원</td><td>가죽</td><td>1,200원</td></tr>
+            <tr><td>닭</td><td>1,000원</td><td>토끼가죽</td><td>5,000원</td></tr>
+            <tr><td>돼지</td><td>1,500원</td><td>토끼발</td><td>5,000원</td></tr>
+            <tr><td>소</td><td>2,500원</td><td>깃털</td><td>500원</td></tr>
+            <tr><td>양</td><td>1,300원</td><td>썩은 살점</td><td>400원</td></tr>
+            <tr><td>뼈</td><td>800원</td><td>실</td><td>900원</td></tr>
+            <tr><td>거미 눈</td><td>1,500원</td><td>화약</td><td>2,000원</td></tr>
+            <tr><td>먹물</td><td>2,500원</td><td>발광 먹물</td><td>4,500원</td></tr>
+            <tr><td>아르마딜로</td><td>12,000원</td><td>화살</td><td>400원</td></tr>
+            <tr><td>엔더진주</td><td>15,000원</td><td>양털</td><td>1,000원</td></tr>
+        </table>`
+};
+
+            area.innerHTML = data[category];
+        }
+    </script>
+</body>
+<a href="index.html">← 메인으로 돌아가기</a>
+</html>
