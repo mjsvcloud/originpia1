@@ -2,23 +2,41 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>댓글 페이지</title>
+    <title>문의 및 피드백</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; max-width: 900px; margin: 40px auto; padding: 20px; color: #333; }
+        h1 { color: #2c3e50; border-bottom: 2px solid #2c3e50; padding-bottom: 10px; }
+        
+        /* 공통 섹션 박스 스타일 */
+        .content-box { 
+            background-color: #fcfcfc; 
+            border: 1px solid #eee; 
+            border-radius: 8px; 
+            padding: 20px; 
+            margin-bottom: 20px; 
+        }
+        
+        h2 { margin-top: 0; color: #2c3e50; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #f8f9fa; font-weight: bold; }
+        
+        ul { margin-top: 10px; padding-left: 20px; }
+        li { margin-bottom: 10px; }
+        
+        .back-link { display: inline-block; margin-top: 30px; color: #666; text-decoration: none; }
+    </style>
 </head>
 <body>
 
-
+    
 
     <header>
-        <h1>문의 글을 남겨주세요</h1>
-    </header>
-
-    <main>
+        <h1>문의</h1>
         <p>운영자가 수시로 확인합니다.</p>
-    </main>
-	<a href="index.html">← 메인으로 돌아가기</a>
-    <hr>
-
-    <section id="comments">
+    </header>
+	<a href="index.html" class="back-link">← 메인으로 돌아가기</a>
+    <div id="giscus-container">
         <script src="https://giscus.app/client.js"
                 data-repo="mjsvcloud/originpia1"
                 data-repo-id="R_kgDOTIgxnQ"
@@ -29,13 +47,13 @@
                 data-reactions-enabled="1"
                 data-emit-metadata="0"
                 data-input-position="bottom"
-                data-theme="preferred_color_scheme"
+                data-theme="light"
                 data-lang="ko"
                 data-loading="lazy"
                 crossorigin="anonymous"
                 async>
         </script>
-    </section>
+    </div>
 
 </body>
 </html>
