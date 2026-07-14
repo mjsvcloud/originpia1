@@ -1,85 +1,89 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <title>패치노트 상세 - 오리진피아</title>
-    <style>
-        body { font-family: sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; color: #333; }
-        .post { background: #fff; padding: 20px; border: 1px solid #eee; border-radius: 8px; }
-        
-        /* 도박 항목 스타일 */
-        .gamble-item { cursor: pointer; padding: 10px; border-bottom: 1px solid #f0f0f0; transition: 0.2s; }
-        .gamble-item:hover { background: #f9f9f9; }
-        .gamble-item h3 { margin: 0; color: #2c3e50; }
-        
-        /* 상세 설명 숨김/표시 */
-        .details { display: none; padding: 10px; background: #f4f4f4; margin-top: 5px; border-radius: 4px; font-size: 0.9em; }
-    </style>
+	<meta charset="UTF-8">
+	<title>패치노트 상세 - 오리진피아</title>
+	<style>
+		body { font-family: sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; color: #333; }
+		.post { background: #fff; padding: 20px; border: 1px solid #eee; border-radius: 8px; }
+		
+		/* 도박 항목 스타일 */
+		.gamble-item { cursor: pointer; padding: 10px; border-bottom: 1px solid #f0f0f0; transition: 0.2s; }
+		.gamble-item:hover { background: #f9f9f9; }
+		.gamble-item h3 { margin: 0; color: #2c3e50; }
+		
+		/* 상세 설명 숨김/표시 */
+		.details { display: none; padding: 10px; background: #f4f4f4; margin-top: 5px; border-radius: 4px; font-size: 0.9em; }
+	</style>
 </head>
 <body>
-    <div class="post">
-        <h2>📢 도박 관련 공지</h2>
-        <div style="color: #777; margin-bottom: 20px;">작성일: 2026.07.01 | 15:55</div>
+	<div class="post">
+		<h2>📢 도박 관련 공지</h2>
+		<div style="color: #777; margin-bottom: 20px;">작성일: 2026.07.15 | 01:51</div>
 			도박은 특정한 장소에 있는 도박장에 방문하면 진행할 수 있습니다
-        <div class="gamble-item" onclick="toggleDetails('desc1')">
-            <h3>1. 블랙잭 (멀티)</h3>
-            <div id="desc1" class="details">
+		<div class="gamble-item" onclick="toggleDetails('desc1')">
+			<h3>1. 블랙잭 (단체)</h3>
+			<div id="desc1" class="details">
 			카드를 오픈하여 21에 가까이 만드는 게임입니다<br>
 			최소 2장의 카드를 오픈 해야하며 버스트시 바로 탈락됩니다<br>
 			버스트시 오픈한 횟수에 따라 벌금이 부과됩니다<br>
 			21미만에서 포기시 처음 배팅금을 돌려받습니다
 			</div>
-        </div>
+		</div>
 
-        <div class="gamble-item" onclick="toggleDetails('desc2')">
-            <h3>2. 하이로우 (멀티)</h3>
-            <div id="desc2" class="details">자신의 숫자를 모르는 상태로 상대방의 숫자만 보고 계속할지 멈출지 고르는 게임입니다<br>
+		<div class="gamble-item" onclick="toggleDetails('desc2')">
+			<h3>2. 하이로우 (단체)</h3>
+			<div id="desc2" class="details">자신의 숫자를 모르는 상태로 상대방의 숫자만 보고 계속할지 멈출지 고르는 게임입니다<br>
 			1등만 모든 판돈을 독식합니다. 1등의 숫자가 작을 수록 상금이 커집니다<br>
 			5이하 : 120%, 10이하 100%, 11이상 80% 
 			</div>
-        </div>
+		</div>
 
-        <div class="gamble-item" onclick="toggleDetails('desc3')">
-            <h3>3. 숫자 맞추기 (개인)</h3>
-            <div id="desc3" class="details">1~13중 숫자를 선택한 뒤 랜덤으로 나오는 숫자와의 차에 따라서 결과가 달라지는 게임입니다<br>
-			적중시 : 2배, +-1범위 : 1배, +-2범위 : 0배, 그 후 : -1배
+		<div class="gamble-item" onclick="toggleDetails('desc3')">
+			<h3>3. 숫자 맞추기 (개인)</h3>
+			<div id="desc3" class="details">0~9중 숫자를 선택한 뒤 랜덤으로 나오는 숫자와 같다면 이기는 게임입니다<br>
+			왼손에 고른 숫자를, 오른손에 칩을 들고 처치하면 됩니다<br>
+			적중시 : 칩 +3개, 그 외 : 칩 -1개
 			</div>
-        </div>
+		</div>
 
-        <div class="gamble-item" onclick="toggleDetails('desc4')">
-            <h3>4. 컬러 맞추기 (개인)</h3>
-            <div id="desc4" class="details">빨강과 검정 중 고르는 게임입니다<br>
-			자신이 고른 색과 랜덤한 색이 같다면 1.5배를 얻고, 다르다면 -1.5배를 잃습니다 
+		<div class="gamble-item" onclick="toggleDetails('desc4')">
+			<h3>4. 흑백 맞추기 (개인)</h3>
+			<div id="desc4" class="details">흑과 백 중 고르는 게임입니다<br>
+			왼손에 고른 색을, 오른손에 칩을 들고 처치하면 됩니다<br>
+			적중시 : 칩 +1개, 그 외 : 칩 -1개
 			</div>
-        </div>
+		</div>
 
-        <div class="gamble-item" onclick="toggleDetails('desc5')">
-            <h3>5. 꽃 도박 (개인)</h3>
-            <div id="desc5" class="details">뼈가루를 통해 나오는 꽃의 수에 따라 결과가 달라지는 게임입니다<br>
-			꽃이 1개 이하 : 0배, 2개 : 1배, 3개 : 2배, 4개 이상 : 3배
+		<div class="gamble-item" onclick="toggleDetails('desc5')">
+			<h3>5. 꽃 도박 (개인)</h3>
+			<div id="desc5" class="details">뼈가루로 나오는 진홍빛 균의 수에 따라 결과가 달라지는 게임입니다<br>
+			왼손에 뼛가루를, 오른손에 칩을 들고 진홍빛 네사체의 중심을 우클릭하면 됩니다<br>
+			1개 이하 : 칩 -1개, 2개 : 칩 1개, 3개 : 칩 2개, 4개 이상 : 칩 3개<br>
+			만약 뒤틀린 균이 나온다면 무조건 -1개입니다
 			</div>
-        </div>
+		</div>
 
-        <div class="gamble-item" onclick="toggleDetails('desc6')">
-            <h3>6. 숫자 터트리기 (개인)</h3>
-            <div id="desc6" class="details">터트려서 나온 숫자의 합에 따라 결과가 달라지는 게임입니다<br>
-			5미만 : -2배, 5~9 : 0배, 10~14 : 1.5배, 15~19 : 2배, 20~24 : 3배, 25이상 : 4배
+		<div class="gamble-item" onclick="toggleDetails('desc6')">
+			<h3>6. 숫자 터트리기 (개인)</h3>
+			<div id="desc6" class="details">터트려서 나온 숫자의 합에 따라 결과가 달라지는 게임입니다<br>
+			0~5 : 칩 -1개, 5~10 : 칩 0개, 11~20 : 칩 1개, 21~30 : 칩 2개, 31~40 : 칩 3개, 41이상 : 칩 5개
 			</div>
-        </div>
-    </div>
+		</div>
+	</div>
 
-    <br>
-    <a href="patchlist.html">← 목록으로 돌아가기</a>
+	<br>
+	<a href="patchlist.html">← 목록으로 돌아가기</a>
 
-    <script>
-        function toggleDetails(id) {
-            var el = document.getElementById(id);
-            if (el.style.display === "block") {
-                el.style.display = "none";
-            } else {
-                el.style.display = "block";
-            }
-        }
-    </script>
+	<script>
+		function toggleDetails(id) {
+			var el = document.getElementById(id);
+			if (el.style.display === "block") {
+				el.style.display = "none";
+			} else {
+				el.style.display = "block";
+			}
+		}
+	</script>
 </body>
 </html>
