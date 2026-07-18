@@ -12,19 +12,42 @@
         table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.9em; }
         th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
         th { background-color: #f8f9fa; }
+		.formula-box {
+        background-color: #f4f4f9;
+        border-left: 4px solid #4a90e2;
+        padding: 15px;
+        margin: 10px 0;
+        font-family: 'Courier New', Courier, monospace;
+        line-height: 1.8;
+    }
+    .formula-highlight { color: #d32f2f; font-weight: bold; }
     </style>
 </head>
 <body>
     <div class="post">
-        <div class="date">2026.07.18 | 01:10</div>
+        <div class="date">2026.07.18 | 23:40</div>
         <h2>패치 내용</h2>
         <p>
 			-성좌 스킬 중 최종 스킬을 획득하는 법이 생겼습니다<br>
 			<span class="indent">- 차후 더 자세하게 공지됩니다</span><br>
 			-직업 전직 시 패시브로 제공되는 스텟이 미지급 되던 오류가 해결됩니다<br>
+			-신념 스텟이 상향됩니다<br>
+			<span class="indent">- 기존 : 신념 1당 방어력 1 증가</span><br>
+			<span class="indent">- 패치 : 신념 1당 방어력 1 증가 + 데미지 감소 1 증가</span><br>
+			<span class="indent">- 데미지 감소는 받는 데미지에서 데미지 감소량 만큼 차감 된 이후 치명타와 피해감소가 적용됩니다</span><br>
+			<span class="indent">- 방관은 데미지 감소에 영향을 주지 않고 피해감소율에만 영향을 줍니다</span><br>
+			-히든 무기 2개가 추가되었습니다<br>
+			-신규 갑옷 2세트가 추가되었습니다<br>
         </p>
     </div>
-    <br>
+	<div class="formula-box">
+    <strong>[최종 데미지 공식]</strong><br>
+    <span class="formula-highlight">최종 데미지 = (공격자 공격력 - 방어자 데미지 감소량) * 방어자 피해감소율</span><br>
+	<span class="formula-highlight">방어자 피해감소율 = (1 - (방어자 피해감소율 × (1 - 공격자 방관률)))</span><br>
+    <small>※ 치명타는 최종 데미지에 2배 데미지입니다</small><br>
+</div>
+    
+	
     <a href="patchlist.html">← 목록으로 돌아가기</a>
 </body>
 </html>
